@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 24 mai 2020 à 09:34
+-- Généré le :  Dim 24 mai 2020 à 11:06
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -328,7 +328,8 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (22, 1),
 (23, 1),
 (24, 1),
-(25, 1);
+(25, 1),
+(26, 1);
 
 -- --------------------------------------------------------
 
@@ -433,7 +434,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`) USING HASH,
   KEY `users_role_id_foreign` (`role_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `users`
+--
+
+INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
+(1, 1, 'arsene', 'lantefanarsene@gmail.com', 'users/default.png', NULL, '$2y$10$f4Jfz.wWNOAvqEMjDybVkObQAu1Kget9Uu2wk/lXi1VJjws3fhPTG', NULL, NULL, '2020-05-24 08:43:47', '2020-05-24 08:43:48');
 
 -- --------------------------------------------------------
 
