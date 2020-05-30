@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  Dim 24 mai 2020 à 11:06
+-- Généré le :  mer. 27 mai 2020 à 22:21
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -109,7 +109,8 @@ CREATE TABLE IF NOT EXISTS `data_types` (
 INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `display_name_plural`, `icon`, `model_name`, `policy_name`, `controller`, `description`, `generate_permissions`, `server_side`, `details`, `created_at`, `updated_at`) VALUES
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2020-05-24 07:01:09', '2020-05-24 07:01:09'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2020-05-24 07:01:09', '2020-05-24 07:01:09'),
-(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-05-24 07:01:09', '2020-05-24 07:01:09');
+(3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-05-24 07:01:09', '2020-05-24 07:01:09'),
+(4, 'location', 'location', 'Location', 'Locations', NULL, 'App\\Location', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-05-25 17:14:31', '2020-05-25 17:14:31');
 
 -- --------------------------------------------------------
 
@@ -127,6 +128,45 @@ CREATE TABLE IF NOT EXISTS `failed_jobs` (
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `locations`
+--
+
+DROP TABLE IF EXISTS `locations`;
+CREATE TABLE IF NOT EXISTS `locations` (
+  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `prix_voulu` int(11) DEFAULT NULL,
+  `type` int(11) DEFAULT NULL,
+  `quatier` int(11) DEFAULT NULL,
+  `autre_1` int(11) DEFAULT NULL,
+  `autre_2` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `locations`
+--
+
+INSERT INTO `locations` (`id`, `prix_voulu`, `type`, `quatier`, `autre_1`, `autre_2`, `created_at`, `updated_at`) VALUES
+(1, 25, 25, 25, NULL, NULL, '2020-05-26 13:25:46', '2020-05-26 13:25:46'),
+(2, NULL, NULL, NULL, 1, NULL, '2020-05-27 06:55:53', '2020-05-27 06:55:53'),
+(3, NULL, NULL, NULL, 1, NULL, '2020-05-27 07:17:22', '2020-05-27 07:17:22'),
+(4, 25, 25, 25, 1, NULL, '2020-05-27 07:32:41', '2020-05-27 07:32:41'),
+(5, NULL, NULL, 25, 1, NULL, '2020-05-27 08:16:57', '2020-05-27 08:16:57'),
+(6, 21, 27, 28, 1, NULL, '2020-05-27 08:20:42', '2020-05-27 08:20:42'),
+(7, 25, 27, 28, 1, NULL, '2020-05-27 08:39:31', '2020-05-27 08:39:31'),
+(8, 1, 2, 3, 1, NULL, '2020-05-27 09:54:12', '2020-05-27 09:54:12'),
+(9, 1, 2, 3, 1, NULL, '2020-05-27 10:00:48', '2020-05-27 10:00:48'),
+(10, 1, 2, 3, 1, NULL, '2020-05-27 10:04:18', '2020-05-27 10:04:18'),
+(11, 1, 2, 3, 1, NULL, '2020-05-27 10:04:55', '2020-05-27 10:04:55'),
+(12, 21, 25, 25, 1, NULL, '2020-05-27 10:05:15', '2020-05-27 10:05:15'),
+(13, 25, 2, 3, 1, NULL, '2020-05-27 11:15:15', '2020-05-27 11:15:15'),
+(14, 25, 87, 8, 1, NULL, '2020-05-27 11:20:34', '2020-05-27 11:20:34');
 
 -- --------------------------------------------------------
 
@@ -191,7 +231,8 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2020-05-24 07:01:09', '2020-05-24 07:01:09', 'voyager.compass.index', NULL),
 (9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2020-05-24 07:01:09', '2020-05-24 07:01:09', 'voyager.bread.index', NULL),
 (10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2020-05-24 07:01:09', '2020-05-24 07:01:09', 'voyager.settings.index', NULL),
-(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2020-05-24 07:01:11', '2020-05-24 07:01:11', 'voyager.hooks', NULL);
+(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2020-05-24 07:01:11', '2020-05-24 07:01:11', 'voyager.hooks', NULL),
+(12, 1, 'Locations', '', '_self', NULL, NULL, NULL, 15, '2020-05-25 17:14:32', '2020-05-25 17:14:32', 'voyager.location.index', NULL);
 
 -- --------------------------------------------------------
 
@@ -233,7 +274,22 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (19, '2018_03_11_000000_add_user_settings', 1),
 (20, '2018_03_14_000000_add_details_to_data_types_table', 1),
 (21, '2018_03_16_000000_make_settings_value_nullable', 1),
-(22, '2019_08_19_000000_create_failed_jobs_table', 1);
+(22, '2019_08_19_000000_create_failed_jobs_table', 1),
+(23, '2014_10_12_100000_create_password_resets_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `password_resets`
+--
+
+DROP TABLE IF EXISTS `password_resets`;
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`(250))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -250,7 +306,7 @@ CREATE TABLE IF NOT EXISTS `permissions` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `permissions_key_index` (`key`(250))
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE= AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `permissions`
@@ -282,7 +338,12 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (23, 'edit_settings', 'settings', '2020-05-24 07:01:10', '2020-05-24 07:01:10'),
 (24, 'add_settings', 'settings', '2020-05-24 07:01:10', '2020-05-24 07:01:10'),
 (25, 'delete_settings', 'settings', '2020-05-24 07:01:10', '2020-05-24 07:01:10'),
-(26, 'browse_hooks', NULL, '2020-05-24 07:01:11', '2020-05-24 07:01:11');
+(26, 'browse_hooks', NULL, '2020-05-24 07:01:11', '2020-05-24 07:01:11'),
+(27, 'browse_location', 'location', '2020-05-25 17:14:32', '2020-05-25 17:14:32'),
+(28, 'read_location', 'location', '2020-05-25 17:14:32', '2020-05-25 17:14:32'),
+(29, 'edit_location', 'location', '2020-05-25 17:14:32', '2020-05-25 17:14:32'),
+(30, 'add_location', 'location', '2020-05-25 17:14:32', '2020-05-25 17:14:32'),
+(31, 'delete_location', 'location', '2020-05-25 17:14:32', '2020-05-25 17:14:32');
 
 -- --------------------------------------------------------
 
@@ -329,7 +390,12 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (23, 1),
 (24, 1),
 (25, 1),
-(26, 1);
+(26, 1),
+(27, 1),
+(28, 1),
+(29, 1),
+(30, 1),
+(31, 1);
 
 -- --------------------------------------------------------
 
@@ -441,7 +507,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'arsene', 'lantefanarsene@gmail.com', 'users/default.png', NULL, '$2y$10$f4Jfz.wWNOAvqEMjDybVkObQAu1Kget9Uu2wk/lXi1VJjws3fhPTG', NULL, NULL, '2020-05-24 08:43:47', '2020-05-24 08:43:48');
+(1, 1, 'arsene', 'lantefanarsene@gmail.com', 'users/default.png', NULL, '$2y$10$f4Jfz.wWNOAvqEMjDybVkObQAu1Kget9Uu2wk/lXi1VJjws3fhPTG', 'qtRnhpnBPUcs7dEB0tCqpJGZY4s2n6c7SyNuC1ON7G0l6pZJXQxO9liycDgh', NULL, '2020-05-24 08:43:47', '2020-05-24 08:43:48');
 
 -- --------------------------------------------------------
 
