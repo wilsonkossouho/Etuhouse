@@ -23,12 +23,12 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $user =  Auth::id() ;
-      $location = $request->session()->get('location');
+            $user =  Auth::id() ;
+            $location = $request->session()->get('location');
 
-      // dd($location);
+            dd($location);
       
-     // dd($input) ;
+            // dd($input) ;
     
         if( $location !=null )
         {  
@@ -45,7 +45,7 @@ class HomeController extends Controller
 
         return redirect('/data');
 
- }
+        }
         else{
             return view('home');
         }

@@ -18,7 +18,7 @@ class MenuController extends Controller
 
     public function createStep1(Request $request)
     {
-        $location = $request->session()->get('location');
+        $location = $request->session()->get('location'); 
 
         return view('location.step1',compact('location'));
     }

@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/',function(){
+    return view('welcome');
+});
+
+/* 
 Route::get('/', function () {
     return redirect('/etape1');
 });
-
+ */
 Route::get('/etape1', 'MenuController@createStep1')->name('signup');
 Route::post('/etape1', 'MenuController@PostcreateStep1');
 Route::get('/etape2', 'MenuController@createStep2');
