@@ -48,7 +48,7 @@ nav{
     opacity: 1;
 }
 
-.connexion{
+.log_register{
     padding-top: 25%;
     background: #FAFAFA 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -75,10 +75,11 @@ nav{
 {
     margin: auto;
     width: 500px;
-    height: 60px;
+    height: 50px;
     margin-bottom: 14px;
 }
 
 .btn-input{
-    height: 78px;
+    margin-top: 40px;
+    height: 60px;
 }

@@ -23,6 +23,11 @@ Route::get('/connexion',function(){
     return view('connexion');
 });
 
+Route::get('/inscription',function(){
+    return view('inscription');
+});
+
+
 /* 
 Route::get('/', function () {
     return redirect('/etape1');
