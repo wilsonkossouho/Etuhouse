@@ -30,6 +30,7 @@ nav{
     letter-spacing: 0.24px;
     color: #414E97;
     opacity: 1;
+    margin: 10px
 }
 .navbar-light .navbar-nav .nav-link:hover {
     font: Bold 24px/29px; 
@@ -47,6 +48,37 @@ nav{
     opacity: 1;
 }
 
-.space{
-    margin-left: 32px;
+.connexion{
+    padding-top: 25%;
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    opacity: 1;
+    height: 1000px;
+}
+
+.btn-success{
+    background-color: #30BB8D;
+}
+
+.title_connexion{
+    text-align: center;
+    letter-spacing: 0px;
+    color: #414E97;
+    opacity: 1;
+    margin-bottom: 42px;
+}
+.form_connect{
+    margin: auto;
+    width: 600px;
+}
+
+.form_ctrl
+{
+    margin: auto;
+    width: 500px;
+    height: 60px;
+    margin-bottom: 14px;
+}
+
+.btn-input{
+    height: 78px;
 }

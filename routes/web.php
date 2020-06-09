@@ -18,6 +18,11 @@ Route::get('/',function(){
     return view('welcome');
 });
 
+
+Route::get('/connexion',function(){
+    return view('connexion');
+});
+
 /* 
 Route::get('/', function () {
     return redirect('/etape1');

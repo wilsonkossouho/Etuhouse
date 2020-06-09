@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item lien">
-                    <a class="nav-link" href="/connexion">Connection</a>
+                    <a class="nav-link" href="#">Connexion</a>
                     </li>
                     <li class="nav-item lien">
                     <a class="nav-link" href="#">Inscription</a>
@@ -40,21 +40,28 @@
                 </div>
             </div>
         </nav>
-        <header class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="contenu">
-                            <div class="h1 main-title">Camarade étudiant nous <br>
-                                avont plusieurs logements <br>
-                                qui attendent quelqu'un<br> 
-                                comme toi</div>
-                            <a href="" class="btn btn-danger btnhome btn-lg">COMMENCER</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8">
+                    <div class="connexion">
+                        <div class="h2 title_connexion">Connexion</div> 
+                        <div class="form_connect">
+                            <form>
+                                <div class="form-group ">
+                                  <input type="text" class="form-control form_ctrl" id="email" placeholder="Email">
+                                </div>
+                                <div class="form-group ">
+                                  <input type="text" class="form-control form_ctrl" id="mdp" placeholder="Mot de passe">
+                                </div>
+                                <button type="submit" class="btn btn-success btn-lg btn-block btn-input">Je me connecte</button>
+                              </form>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-2"></div>
             </div>
-        </header>
+        </div>
        {{--   <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
