@@ -9,7 +9,8 @@
                             <div class="h1 main-title">Camarade étudiant nous <br>
                                 avont plusieurs logements <br>
                                 qui attendent quelqu'un<br> 
-                                comme toi</div>
+                                comme toi
+                            </div>
                             <a href="" class="btn btn-danger btnhome btn-lg">COMMENCER</a>
                         </div>
                     </div>

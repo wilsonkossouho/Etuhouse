@@ -6,7 +6,7 @@
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
                 <div class="log_register">
-                    <div class="h2 title_connexion">Connexion</div> 
+                    <div class="h2 title_log_register">Connexion</div> 
                     <div class="form_connect">
                         <form>
                             <div class="form-group ">
