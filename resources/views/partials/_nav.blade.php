@@ -31,10 +31,10 @@
                     <a class="nav-link" href="/connexion">Connexion</a>
                     </li>
                     <li class="nav-item lien">
-                    <a class="nav-link" href="inscription">Inscription</a>
+                    <a class="nav-link" href="/inscription">Inscription</a>
                     </li>
                     <li class="nav-item lien">
-                    <a class="nav-link btn btn btn-success btnhome" href="#">Je propose une location</a>
+                    <a class="nav-link btn btn btn-success btnhome" href="/inscriptionAgent">Je propose une location</a>
                     </li>
                 </ul>
                 </div>

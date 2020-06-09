@@ -28,6 +28,11 @@ Route::get('/inscription',function(){
 });
 
 
+Route::get('/inscriptionAgent',function(){
+    return view('inscriptionAgent');
+});
+
+
 /* 
 Route::get('/', function () {
     return redirect('/etape1');
