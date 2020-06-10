@@ -18,8 +18,8 @@
     <body id="basic-setup">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="Image/logo.png" width="167px" height="50px" alt="logo">
+                <a class="navbar-brand" href="/">
+                    <img src="{{ config('APP_URL') }}/Image/logo.png" width="167px" height="50px" alt="logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

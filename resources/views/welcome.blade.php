@@ -11,7 +11,7 @@
                                 qui attendent quelqu'un<br> 
                                 comme toi
                             </div>
-                            <a href="" class="btn btn-danger btnhome btn-lg">COMMENCER</a>
+                            <a href="/location/lieu" class="btn btn-danger btnhome btn-lg">COMMENCER</a>
                         </div>
                     </div>
                 </div>

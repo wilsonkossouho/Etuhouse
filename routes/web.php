@@ -18,7 +18,6 @@ Route::get('/',function(){
     return view('welcome');
 });
 
-
 Route::get('/connexion',function(){
     return view('connexion');
 });
@@ -27,9 +26,12 @@ Route::get('/inscription',function(){
     return view('inscription');
 });
 
-
 Route::get('/inscriptionAgent',function(){
     return view('inscriptionAgent');
+});
+
+Route::get('/location/lieu',function(){
+    return view('location/lieu');
 });
 
 
