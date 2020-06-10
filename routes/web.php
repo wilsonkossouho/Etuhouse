@@ -34,6 +34,18 @@ Route::get('/location/lieu',function(){
     return view('location/lieu');
 });
 
+Route::get('/location/type',function(){
+    return view('location/type');
+});
+
+Route::get('/location/budget',function(){
+    return view('location/budget');
+});
+
+Route::get('/location/proximiter',function(){
+    return view('location/proximiter');
+});
+
 
 /* 
 Route::get('/', function () {
