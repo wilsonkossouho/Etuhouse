@@ -20,7 +20,7 @@
                         <div class="progress block-progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%">Étape 1 sur 4</div>
                         </div>
-                        <form action="">
+                        <form action="/locations/type">
                             <div class="snd-block-section">
                                 <p>Nous allons faire correspondre tes critères avec ceux des loueurs pour augmenter tes chances de trouver rapidement un logement</p>
                             </div>

@@ -8,7 +8,7 @@
                     <div class="log_register">
                         <div class="h2 title_log_register">Inscription<br> Agent immobilier</div> 
                         <div class="form_connect">
-                            <form action="">
+                            <form action="/propriétaire/inscriptions/etape1">
                                 @include('partials._formRegister')
                                 <button type="submit" class="btn btn-success btn-lg btn-block btn-reg">Je m'inscris</button>
                             </form>

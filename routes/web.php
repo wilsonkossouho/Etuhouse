@@ -30,21 +30,44 @@ Route::get('/inscriptionAgent',function(){
     return view('inscriptionAgent');
 });
 
-Route::get('/location/lieu',function(){
-    return view('location/lieu');
+Route::get('/locations/lieu',function(){
+    return view('locations/lieu');
 });
 
-Route::get('/location/type',function(){
-    return view('location/type');
+Route::get('/locations/type',function(){
+    return view('locations/type');
 });
 
-Route::get('/location/budget',function(){
-    return view('location/budget');
+Route::get('/locations/budget',function(){
+    return view('locations/budget');
 });
 
-Route::get('/location/proximiter',function(){
-    return view('location/proximiter');
+Route::get('/locations/proximiter',function(){
+    return view('locations/proximiter');
 });
+
+Route::get('/locations/resume',function(){
+    return view('locations/resume');
+});
+
+Route::get('/propriétaire/inscriptions/etape1',function(){
+    return view('/propriétaire/inscriptions/etape1');
+});
+Route::get('/propriétaire/inscriptions/etape2',function(){
+    return view('/propriétaire/inscriptions/etape2');
+});
+Route::get('/propriétaire/inscriptions/etape3',function(){
+    return view('/propriétaire/inscriptions/etape3');
+});
+Route::get('/propriétaire/inscriptions/etape4',function(){
+    return view('/propriétaire/inscriptions/etape4');
+});
+
+
+Route::get('/propriétaire/dashboard',function(){
+    return view('/propriétaire/dashboard/dashboard');
+});
+
 
 
 /* 

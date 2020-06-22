@@ -18,17 +18,24 @@
                             </div>
                         </div>
                         <div class="progress block-progress">
-                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">Étape 3 sur 4</div>
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">Étape 4 sur 4</div>
                         </div>
-                        <form action="">
+                        <form action="/locations/resume">
                             <div class="snd-block-section">
-                                <strong>Combien es tu prêt à payer par mois ?</strong>
-                                <p>Le loyer moyen à Zogbadjè pour 1 chambre à couché - 1 salon sanitaire est de 20 000 FCFA</p>
-                                <div class="graph">
-
-                                </div>
-                                <pre>  18 000                 30 000                  60 000</pre>
-                                <input type="text" class="align" placeholder="Entrez le prix">
+                                <strong>Souhaites tu vivre prêt d'un lieu en particulier?</strong>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeofbedroom" id="Radios1" value="simple">
+                                    <label class="form-check-label" for="type">
+                                      Oui
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="typeofbedroom" id="Radios2" value="sanitaire">
+                                    <label class="form-check-label" for="type">
+                                      Non
+                                    </label>
+                                  </div>
+                                  <input type="text" placeholder="Non loin de L'UAC">
                             </div>
                             <button type="submit" class="btn btn-success btn-lg btn-block btn-input btn-block-section">Suivant</button>
                         </form>

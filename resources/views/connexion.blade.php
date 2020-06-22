@@ -15,8 +15,9 @@
                             <div class="form-group ">
                             <input type="text" class="form-control form_ctrl" id="mdp" placeholder="Mot de passe">
                             </div>
-                            <button type="submit" class="btn btn-success btn-lg btn-block btn-input">Je me connecte</button>
+                            <button type="submit" class="btn btn-vrt btn-lg btn-block btn-input">Je me connecte</button>
                         </form>
+                        {{-- <button type="submit" class="btn btn-vrt btn-lg btn-block btn-input">Je me connecte</button> --}}
                     </div>
                 </div>
             </div>

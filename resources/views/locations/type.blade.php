@@ -20,7 +20,7 @@
                         <div class="progress block-progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">Étape 2 sur 4</div>
                         </div>
-                        <form action="">
+                        <form action="/locations/budget">
                             <div class="snd-block-section">
                                 <strong>Quel type de logement désires tu ?</strong>
                                 <div class="form-check">
@@ -63,7 +63,7 @@
                                     </label>
                                   </div>
                             </div>
-                            <button type="submit" class="btn btn-danger btn-lg btn-block btn-input btn-block-section">Suivant</button>
+                            <button type="submit" class="btn btn-danger btn-lg btn-block btn-input btn-block-section">Suivante</button>
                         </form>
                     </div>
                 </div>

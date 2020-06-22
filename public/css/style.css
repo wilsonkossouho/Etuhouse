@@ -1,6 +1,22 @@
 body {
-    font-family: 'Montserrat' !important;
+    font-family: 'Montserrat';
     color: #272727;
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    width: 100%;
+    padding-right: 150px !important;
+    padding-left: 180px !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+.logo{
+    width: 167px;
+    height: 42px;
+    text-align: left;
+    font: Bold 34px/42px Montserrat !important;
+    letter-spacing: 0px;
+    color: #414E97;
+    opacity: 1;
 }
 #basic-setup {
     background: #fff;
@@ -14,8 +30,12 @@ body {
 }
 
 .main-title{
-    font-weight: 700;
-    font: Bold Montserrat;
+    width: 58%;
+    font-weight: 900 !important;
+    padding-bottom: 54px;
+    letter-spacing: 0px;
+    text-align: left;
+    font: Bold 61px/82px Montserrat;
 }
 
 nav{
@@ -24,29 +44,85 @@ nav{
 }
 .contenu{
     text-align: left;
-    padding-top: 25%;
+    padding-top: 20%;
     color: #FFFFFF !important;
+    padding-left: 35px !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    font: Bold 24px/29px; 
+    font: Bold 24px/29px Montserrat; 
     letter-spacing: 0.24px;
     color: #414E97;
     opacity: 1;
     margin: 10px
 }
+.na
+{
+    margin-top: 10px;
+}
 .navbar-light .navbar-nav .nav-link:hover {
-    font: Bold 24px/29px; 
+    font: Bold 24px/29px Montserrat; 
     letter-spacing: 0.24px;
     color: #414E97;
     opacity: 1;
 }
 
 
+.uppercase{
+    text-transform: uppercase;
+}
+
+.color-red{
+    background-color: #F54E4F;
+    color: white;
+}
+
 .btnhome{
+    
+    font: Bold 24px/29px Montserrat; 
     text-align: left;
     color: #FFFFFF !important;
+    border-radius: 8px;
+    padding: 15px 30px !important;
 }
+
+/* animation css des buttons */
+.btn
+{
+    display:block;
+    position: relative;
+    overflow: hidden;
+    border: none !important;
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+.btn .ripple{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    animation: ripple 1s ease-in-out;
+}
+
+
+
+@keyframes ripple{
+    to{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(2.5);
+    }
+}
+
+
+/* ----------------------------------- */
 
 .log_register{
     padding-top: 25%;
@@ -55,9 +131,20 @@ nav{
     height: 1000px;
 }
 
-.btn-success{
+.btn-vrt{
+    background-color: #30BB8D;
+    color: white;
+}
+
+.btn-vrt:hover {
+    color: #fff;
     background-color: #30BB8D;
 }
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
 
 .title_log_register{
     text-align: center;
@@ -124,7 +211,6 @@ nav{
 .block-title{
     margin:15px 0 0 10px !important;
     font: SemiBold 24px/29px Montserrat;
-    color: #414E97;
 }
 
 
@@ -160,4 +246,50 @@ nav{
 .align{
     width: 150px;
     margin:0 0 0 35% ;
+}
+
+.textC{
+    text-align: center;
+}
+
+.panel-heading{
+    width: 600px;
+    height: 50px;
+    padding: 15px 30px;
+    background: #414E97 0% 0% no-repeat padding-box;
+    border-radius: 6px 6px 0px 0px;
+    color: white;
+    opacity: 1;
+}
+
+.panel-body{
+    width: 600px;
+    margin-bottom: 15px;
+    padding: 15px 30px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #D8D8D873;
+    border-radius: 6px;
+    opacity: 1;
+}
+
+.inputAutre{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+}
+.inputAutre:focus{
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #414E97;
+}
+
+form{
+    margin: 15px 0;
+}
+
+.dash{
+    padding-top: 8%;
+}
+.dash a{
+    margin-right: 8px;
 }
